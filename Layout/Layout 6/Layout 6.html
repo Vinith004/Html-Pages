@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>CV Layout</title>
+
+</head>
+
+<body>
+  <header class="header">
+    <ul class="header-menu">
+      <li><i class="fa fa-home" style="margin-right: 12px;"></i>Logo</li>
+      <li class="no-mobile"><i class="fa fa-globe"></i></li>
+      <li class="no-mobile"><i class="fa fa-user"></i></li>
+      <li class="no-mobile"><i class="fa fa-envelope"></i></li>
+      <li class="no-mobile notification">
+        <i class="fa fa-bell"></i>
+        <span class="badge">3</span>
+        <ul class="notifications">
+          <li>One New Friend Request</li>
+          <li>John Due accepted your friend request</li>
+          <li>Jane likes your post</li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <img src="https://www.w3schools.com/w3images/avatar2.png" class="avatar" alt="Avatar">
+      <div class="menu-icon" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  <div class="navbar" id="navbar">
+    <ul>
+      <li>Link 1</li>
+      <li>Link 2</li>
+      <li>My Profile</li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="left">
+      <div class="profile">
+        <h3>Vinith R</h3>
+        <div class="profile-image">
+          <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar">
+        </div>
+        <hr>
+        <div class="info">
+          <p><i class="fa fa-pencil"></i> Designer, UI</p>
+          <p><i class="fa fa-home"></i> London, UK</p>
+          <p><i class="fa fa-birthday-cake"></i> April 1, 1988</p>
+        </div>
+      </div>
+      <div class="options">
+        <ul>
+          <li><i class="fa fa-circle"></i> My Groups</li>
+          <li><i class="fa fa-calendar"></i>My Events</li>
+          <li><i class="fa fa-users"></i>My Photos</li>
+        </ul>
+      </div>
+      <div class="interest">
+        <h3>Interests</h3>
+        <div class="interest-tags">
+          <span class="tag tag1">Art</span>
+          <span class="tag tag1">Design</span>
+          <span class="tag tag1">Writing</span>
+          <span class="tag">Coding</span>
+          <span class="tag">Cycling</span>
+          <span class="tag">Sleeping</span>
+          <span class="tag">Dancing</span>
+          <span class="tag">Swimming</span>
+          <span class="tag">Cooking</span>
+        </div>
+      </div>
+      <div class="update">
+        <h3>Hey!</h3>
+        <p>People are looking at your profile. Find out who.</p>
+      </div>
+    </div>
+    <div class="main">
+      <div class="post">
+        <h3>Social media template by w3.css</h3>
+        <input type="text" placeholder="What's on your mind?" value="Status: Feeling blue" />
+        <button class="post-button"> <i class="fa fa-pencil"></i>  Post</button>
+      </div>
+      <div class="other-posts">
+        <div class="other-posts-header">
+          <div style="display: flex; align-items: center;">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" style="width:60px">
+            <h3> John Doe</h3>
+          </div>
+
+          <div>1 min</div>
+        </div>
+        <hr>
+        <div class="other-posts-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </div>
+        <div class="other-posts-footer">
+          <button class="post-button"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button class="post-button"><i class="fa fa-comment"></i> Comment</button>
+        </div>
+      </div>
+      <div class="other-posts">
+        <div class="other-posts-header">
+          <div style="display: flex; align-items: center;">
+            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" style="width:60px">
+            <h3> Jane Doe</h3>
+          </div>
+
+          <div>16 min</div>
+        </div>
+        <hr>
+        <div class="other-posts-content">
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat.
+          </div>
+          <div class="image-container">
+            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Northern Lights" class="post-image">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+        </div>
+        <div class="other-posts-footer">
+          <button class="post-button"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button class="post-button"><i class="fa fa-comment"></i> Comment</button>
+        </div>
+      </div>
+      <div class="other-posts">
+        <div class="other-posts-header">
+          <div style="display: flex; align-items: center;">
+            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:60px">
+            <h3> Angie Jane</h3>
+          </div>
+
+          <div>16 min</div>
+        </div>
+        <hr>
+        <div class="other-posts-content">
+          <div>Have you seen this?</div>
+          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="post-image">
+        </div>
+        <div class="other-posts-footer">
+          <button class="post-button"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button class="post-button"><i class="fa fa-comment"></i> Comment</button>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-box">
+        <p>Upcoming Events:</p>
+        <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+        <p><strong>Holiday</strong></p>
+        <p>Friday 15:00</p>
+        <p><button >Info</button></p>
+      </div>
+      <div class="right-box">
+        <p>Friend Request</p>
+        <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Forest" style="width:100%;">
+        <p><strong>Jane Doe</strong></p>
+        <p><button class="green"><i class="fa fa-check"></i></button>
+          <button class="red"><i class="fa fa-remove"></i></button></p>
+      </div>
+      <div class="right-box">
+         <p>ADS</p>
+      </div>
+      <div class="right-box">
+         <p><i class="fa fa-bug "></i></p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p class="footer-text">Footer</p>
+    <p class="footer-text1">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+  <script>
+    function openNav() {
+      document.getElementById('navbar').classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>

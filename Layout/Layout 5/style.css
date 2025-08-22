@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #009688;
+    --secondary-color: #757575;
+    --bg-color: #f1f1f1;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 1rem auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    grid-template-areas: "profile work"
+        "profile education";
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    margin: 0 1rem
+}
+
+/* #region profile section */
+
+.profile {
+    grid-area: profile;
+    background-color: var(--white-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+}
+
+.profile-image div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: var(--black-color);
+    font-size: 30px;
+}
+
+.profile-info {
+    padding: 1rem;
+}
+
+.profile-info p {
+    margin: 1rem 0;
+    color: var(--secondary-color);
+}
+
+.profile-info p i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.progress {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin: 1rem 0;
+    border-radius: 20px;
+}
+
+.bar {
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    min-height: 15px;
+}
+
+/* #endregion profile section */
+
+/* #region about section */
+
+.work {
+    grid-area: work;
+    background-color: var(--white-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    padding: 0 1rem;
+    color: var(--secondary-color);
+}
+
+.work-title {
+    margin: 1rem 0;
+    font-size: 30px;
+}
+
+.work-title i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+/* #endregion about section */
+
+/* #region education section */
+
+.education {
+    grid-area: education;
+    background-color: var(--white-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    padding: 0 1rem;
+    color: var(--secondary-color);
+}
+
+.education-title {
+    margin: 1rem 0;
+    font-size: 30px;
+}
+
+.education-title i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.work-sub-title, .education-sub-title {
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-date, .education-date {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.work-date i, .education-date i {
+    margin-right: 1rem;
+}
+
+.work-description, .education-description {
+    margin: 1rem 0;
+}
+
+/* #endregion education section */
+
+/* #region footer section */
+
+.footer {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--white-color)
+}
+
+.footer p {
+    margin: 1rem 0;
+}
+
+/* #endregion footer section */
+
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: 95%;
+        grid-template-areas: "profile"
+            "work"
+            "education";
+    }
+}

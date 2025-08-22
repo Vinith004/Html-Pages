@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Mail Layout</title>
+
+</head>
+
+<body>
+  <header class="header" onclick="toggleSidebar()">
+    <div>
+      <i class="fa fa-bars"></i>  
+    </div>
+    <div>
+
+    </div>
+  </header>
+  <aside class="sidebar">
+    <div class="sidebar_header">
+      <img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;">
+    </div>
+    <div class="new_message">
+      New Message<i class="fa fa-pencil"></i>
+    </div>
+    <ul class="menu">
+      <li class="inbox" onclick="this.classList.toggle('open')"><i class="fa fa-inbox"></i> Inbox (3)<i
+          class="fa fa-caret-down"></i>
+        <div class="sub_menu">
+          <div class="item">
+            <div class="header">
+              <img src="https://www.w3schools.com/w3images/avatar3.png" style="width:15%;">
+              <span>Borge Refsnes</span>
+            </div>
+            <h6>Subject: Remember Me</h6>
+            <p>Hello, i just wanted to let you know that i'll be home at...</p>
+          </div>
+          <div class="item">
+            <div class="header">
+              <img src="https://www.w3schools.com/w3images/avatar5.png" style="width:15%;">
+              <span>Jane Doe</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </div>
+          <div class="item">
+            <div class="header">
+              <img src="https://www.w3schools.com/w3images/avatar6.png" style="width:15%;">
+              <span>John Doe</span>
+            </div>
+            <p>Welcome!</p>
+          </div>
+        </div>
+      </li>
+      <li><i class="fa fa-paper-plane"></i>Sent</li>
+      <li><i class="fa fa-hourglass-end"></i>Drafts</li>
+      <li><i class="fa fa-trash"></i>Trash</li>
+
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="main_header">
+      <img src=" https://www.w3schools.com/w3images/avatar3.png" style="width:20%;">
+      <h5 class="subject">Subject: Remember me</h5>
+      <h4 class="date"><i class="fa fa-clock-o"></i> From Borge Refsnes, Sep 27, 2015.</h4>
+      <button class="btn">Reply<i class="w3-margin-left fa fa-mail-reply"></i></button>
+      <button class="btn">Forward<i class="w3-margin-left fa fa-arrow-right"></i></button>
+    </div>
+    <hr>
+    <div class="main_body">
+      <p>Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Best Regards, <br>Borge Refsnes</p>
+    </div>
+  </main>
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
