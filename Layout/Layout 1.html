@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .topbar {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 220px;
+            padding: 10px;
+            background-color: rgb(124, 124, 200);
+        }
+
+        .content {
+            flex: 1;
+            padding: 10px;
+            height: calc(100vh - 60px - 40px);
+            overflow-y: auto;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        @media (max-width:768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .sidebar{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <h2>My Page</h2>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>Side Bar</h2>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Help</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?       nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?       nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veniam amet eos suscipit? Ea dolorem,
+                placeat iure rem quas voluptatibus atque repudiandae nisi quam quis blanditiis nesciunt, velit corrupti
+                nulla?
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>All rights reserved</p>
+    </div>
+</body>
+
+</html>

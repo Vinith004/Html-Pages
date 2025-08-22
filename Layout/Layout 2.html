@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Layout</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: #007bff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      display: grid;
+      min-height: 100vh;
+      color: var(--text-color);
+      grid-template-rows: 60px 1fr auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+      color: white;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+    }
+
+    nav .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav .logo {
+      font-size: 24px;
+    }
+
+    .layout {
+      grid-area: main;
+      background-color: var(--bg-color);
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-areas: "sidebar main";
+      grid-template-rows: calc(100vh - 60px - 50px);
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      overflow-y: auto;
+      height: 100%;
+      padding: 20px;
+    }
+
+
+    .sidebar ul li {
+      list-style: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    }
+
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: sticky;
+      bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+      }
+
+      .sidebar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 220px;
+        height: calc(100vh - 60px);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
+    <h3 class="logo">My Website</h3>
+  </nav>
+  <div class="layout">
+    <div class="sidebar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Profile</li>
+        <li>Settings</li>
+        <li>Logout</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h2>Welcome</h2>
+      <p>
+        This is the main content area. 
+      </p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Your Company. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
