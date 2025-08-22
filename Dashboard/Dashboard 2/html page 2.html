@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #333;
+      --secondary-color: #555;
+      --white-color: #fff;
+      --black-color: #000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr auto;
+      grid-template-areas:
+        "header"
+        "layout"
+        "footer";
+    }
+
+    .header {
+      grid-area: header;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      display: flex;
+      justify-content: start;
+      gap: 16px;
+      align-items: center;
+      padding: 0 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+    
+    .layout{
+      grid-area: layout;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: calc(100vh - 60px - 50px);
+      grid-template-areas: "sidebar main";
+    }
+
+    .sidebar{
+      grid-area: sidebar;
+      background-color: var(--secondary-color);
+      color: var(--white-color);
+      padding: 1rem;
+    }
+
+    .sidebar ul li{
+      list-style: none;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover{
+      grid-area: sidebar;
+      background-color: var(--primary-color);
+      border-radius: 10px;
+    }
+
+    .main{
+      grid-area: main;
+      background-color: var(--white-color);
+      padding: 1rem;
+      display: flex;
+      gap: 16px;
+      justify-content: start;
+      flex-wrap: wrap;
+      overflow-y: auto;
+    }
+
+    .main .card{
+      background-color: var(--white-color);
+      color: var(--black-color);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      flex-grow: 1;
+    }
+
+    .card h3{
+      margin-bottom: 0.5rem;
+    }
+
+    .card button{
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: var(--white-color);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card button:hover{
+      background: var(--secondary-color);
+    }
+
+    .footer{
+      grid-area: footer;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      text-align: center;
+      padding: 1rem;
+      position: sticky;
+      bottom: 0;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .header .hamburger {
+        display: block;
+      }
+
+      .layout{
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100vh - 60px - 50px);
+        grid-template-areas: "main";
+      }
+
+      .sidebar{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        height: calc(100vh - 60px);
+        width: 200px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open{
+        transform: translateX(0);
+      }
+    } 
+
+  </style>
+</head>
+
+<body>
+  <nav class="header">
+    <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
+    <h1>My Dashboard</h1>
+  </nav>
+  <div class="layout">
+    <div class="sidebar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Reports</li>
+        <li>Analytics</li>
+        <li>Settings</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="card">
+        <h3>Card Title 1</h3>
+        <div>Short description for card 1.</div>
+        <button>Action</button>
+      </div>
+      <div class="card">
+        <h3>Card Title 2</h3>
+        <div>Short description for card 2.</div>
+        <button>Action</button>
+      </div>
+      <div class="card">
+        <h3>Card Title 3</h3>
+        <div>Short description for card 3.</div>
+        <button>Action</button>
+      </div>
+      <div class="card">
+        <h3>Card Title 4</h3>
+        <div>Short description for card 4.</div>
+        <button>Action</button>
+      </div>
+      <div class="card">
+         <h3>Card Title 5</h3>
+        <div>Short description for card 5.</div>
+        <button>Action</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    &copy; 2025 My Dashboard
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
